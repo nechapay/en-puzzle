@@ -51,7 +51,7 @@ function getUrl(url) {
     <div class="dialog-wrapper">
       <div class="dialog-head">
         <div class="head-wrapper">
-          <span>Вопрос за {{ props.question.points - penalty }} очков</span>
+          <span>Question for {{ props.question.points - penalty }} points</span>
         </div>
         <button class="close-button" @click="handleCloseClick">X</button>
       </div>
