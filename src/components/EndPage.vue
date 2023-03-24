@@ -4,14 +4,14 @@ let props = defineProps(['score'])
 
 <template>
   <div class="final-page fill">
-    <div class="final-page__header">Поздравляем!<br />Ваш счёт: {{ props.score }}</div>
+    <div class="final-page__header">Congratulations!<br />Your score: {{ props.score }}</div>
   </div>
 </template>
 
 <style scoped>
 .final-page {
   /* background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), url('/img/bg.png'); */
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5));
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

@@ -40,6 +40,10 @@ function showTips() {
   rotateTips.value = true
   penalty.value = 5
 }
+
+function getUrl(url) {
+  return new URL(`/img/${url}`, import.meta.url)
+}
 </script>
 
 <template>
@@ -69,23 +73,23 @@ function showTips() {
           <div class="tips">
             <div class="flip-card tip" :class="{ rotate: rotateTips }" v-for="tip in props.question.tips">
               <div class="flip-card-inner" :class="{ rotate: rotateTips }">
-                <div class="flip-card-front tip-front">Подсказка</div>
+                <div class="flip-card-front tip-front">Hint</div>
                 <div class="flip-card-back tip-back">
-                  <img :src="`/img/${tip}`" />
+                  <img :src="`./img/${tip}`" />
                 </div>
               </div>
             </div>
           </div>
           <div class="tips-controls" v-if="!rotateTips">
-            <button class="my-button" @click="showTips">Показать подсказку</button>
+            <button class="my-button" @click="showTips">Show hint</button>
           </div>
         </div>
       </div>
       <div class="dialog-footer">
-        <button class="my-button" @click="handleAnswerClick" v-if="!answerVisible">Показать ответ</button>
+        <button class="my-button" @click="handleAnswerClick" v-if="!answerVisible">Show answer</button>
         <div v-else class="buttons-wrapper">
-          <button class="my-button correct" @click="handleSolved(true)">Верно</button>
-          <button class="my-button incorrect" @click="handleSolved(false)">Неверно</button>
+          <button class="my-button correct" @click="handleSolved(true)">Correct</button>
+          <button class="my-button incorrect" @click="handleSolved(false)">Incorrect</button>
         </div>
       </div>
     </div>

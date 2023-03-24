@@ -308,7 +308,7 @@ function handleClose(val) {
 }
 </script>
 <template>
-  <div class="highscore" v-show="!solved">Счёт - {{ score }}</div>
+  <div class="highscore" v-show="!solved">Score - {{ score }}</div>
   <div class="container grid">
     <div class="category grid" v-for="card in cards" :key="card.id" :class="card.class">
       <div
@@ -330,7 +330,7 @@ function handleClose(val) {
 <style lang="css" scoped>
 .container {
   width: 96%;
-  height: 50vw;
+  height: 46vw;
   border: 1px solid black;
   margin: 0 2% 2% 2%;
   background-repeat: no-repeat;
@@ -428,14 +428,14 @@ function handleClose(val) {
   background-size: 200%;
   background-repeat: no-repeat;
   background-image: url('/img/cat1.png');
-  background-position: 0% 65%;
+  background-position: 0% 60%;
 }
 
 .bg-14 {
   background-size: 200%;
   background-repeat: no-repeat;
   background-image: url('/img/cat1.png');
-  background-position: 100% 65%;
+  background-position: 100% 60%;
 }
 
 .bg-21 {
@@ -455,14 +455,14 @@ function handleClose(val) {
   background-size: 200%;
   background-repeat: no-repeat;
   background-image: url('/img/cat2.png');
-  background-position: 0% 86%;
+  background-position: 0% 73%;
 }
 
 .bg-24 {
   background-size: 200%;
   background-repeat: no-repeat;
   background-image: url('/img/cat2.png');
-  background-position: 100% 86%;
+  background-position: 100% 73%;
 }
 
 .bg-31 {
@@ -482,14 +482,14 @@ function handleClose(val) {
   background-size: 200%;
   background-repeat: no-repeat;
   background-image: url('/img/cat3.png');
-  background-position: 0% 75%;
+  background-position: 0% 65%;
 }
 
 .bg-34 {
   background-size: 200%;
   background-repeat: no-repeat;
   background-image: url('/img/cat3.png');
-  background-position: 100% 75%;
+  background-position: 100% 65%;
 }
 
 .bg-41 {
@@ -509,14 +509,14 @@ function handleClose(val) {
   background-size: 200%;
   background-repeat: no-repeat;
   background-image: url('/img/cat4.png');
-  background-position: 0% 75%;
+  background-position: 0% 63%;
 }
 
 .bg-44 {
   background-size: 200%;
   background-repeat: no-repeat;
   background-image: url('/img/cat4.png');
-  background-position: 100% 75%;
+  background-position: 100% 63%;
 }
 
 .hide {
@@ -531,5 +531,73 @@ function handleClose(val) {
   font-size: 180%;
   font-weight: bolder;
   height: 2%;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 96%;
+    height: 50vw;
+    border: 1px solid black;
+    margin: 0 2% 2% 2%;
+    background-repeat: no-repeat;
+    background-image: url('/img/bg.png');
+    background-size: cover;
+  }
+
+  .bg-13 {
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-image: url('/img/cat1.png');
+    background-position: 0% 65%;
+  }
+
+  .bg-14 {
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-image: url('/img/cat1.png');
+    background-position: 100% 65%;
+  }
+
+  .bg-23 {
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-image: url('/img/cat2.png');
+    background-position: 0% 86%;
+  }
+
+  .bg-24 {
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-image: url('/img/cat2.png');
+    background-position: 100% 86%;
+  }
+
+  .bg-33 {
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-image: url('/img/cat3.png');
+    background-position: 0% 75%;
+  }
+
+  .bg-34 {
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-image: url('/img/cat3.png');
+    background-position: 100% 75%;
+  }
+
+  .bg-43 {
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-image: url('/img/cat4.png');
+    background-position: 0% 75%;
+  }
+
+  .bg-44 {
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-image: url('/img/cat4.png');
+    background-position: 100% 75%;
+  }
 }
 </style>
